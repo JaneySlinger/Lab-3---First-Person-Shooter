@@ -18,12 +18,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //rotate the player object about the Y axis
         //look left and right
         float rotation = Input.GetAxis("Mouse X");
