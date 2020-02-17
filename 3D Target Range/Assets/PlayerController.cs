@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject shot;
+    public Transform shotTransform;
+
     float verticalVelocity = 0;
     public float movementSpeed = 5;
-    public float cameraSpeed = 5;
+    public float cameraSpeedVertical = 5;
+    public float cameraSpeedHorizontal = 10;
     public float jumpHeight = 5;
+
+    public float fireRate = 0.5f;
+    private float nextFire = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +27,13 @@ public class PlayerController : MonoBehaviour
         //rotate the player object about the Y axis
         //look left and right
         float rotation = Input.GetAxis("Mouse X");
-        rotation *= cameraSpeed;
+        rotation *= cameraSpeedHorizontal;
         transform.Rotate(0,rotation,0);
 
         //rotate the camera (the player's head) about its X axis
         //look up and down
         float updown = Input.GetAxis("Mouse Y");
-        updown *= cameraSpeed;
+        updown *= cameraSpeedVertical;
         Camera.main.transform.Rotate(-updown, 0,0);
 
         //moving forwards and backwards
@@ -53,5 +60,10 @@ public class PlayerController : MonoBehaviour
 
         //move at different speed to make up for variable framerates
         characterController.Move(speed * Time.deltaTime);
+
+        if (Input.GetButton("Fire1") && Time.time > nextFire){
+            nextFire = Time.time + fireRate;
+            Instantiate(shot, shotTransform.position, Camera.main.transform.rotation);
+        }
     }
 }

@@ -1540,7 +1540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2035580520}
@@ -2060,9 +2060,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6490fe7966c834ea17e7bfb345bb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  cameraSpeed: 5
-  jumpHeight: 5
+  shot: {fileID: 5130323427812308654, guid: f6951880c7b4d6d42ae7d0531e6bc87b, type: 3}
+  shotTransform: {fileID: 2035580520}
+  movementSpeed: 8
+  cameraSpeedVertical: 10
+  cameraSpeedHorizontal: 10
+  jumpHeight: 7
+  fireRate: 0.5
 --- !u!43 &1927686586
 Mesh:
   m_ObjectHideFlags: 0
@@ -2247,7 +2251,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035580519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534669905}
