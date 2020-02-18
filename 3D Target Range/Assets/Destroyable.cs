@@ -27,7 +27,7 @@ public class Destroyable : MonoBehaviour
     private void OnDestroy(){
         //tell the game controller
         if (gameController != null){
-            gameController.TargetDestroyed();
+            gameController.TargetDestroyed(timeBonus);
         }
     }
 }

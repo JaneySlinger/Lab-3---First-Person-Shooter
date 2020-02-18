@@ -34,15 +34,22 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void TargetDestroyed(){
+    public void TargetDestroyed(int timeToAdd){
         if(GameObject.FindObjectsOfType<Destroyable>().Length == 0){
             Debug.Log("You win!");
             WinText.text = "You Win!";
             isGameOver = true;
         }
         if(!isGameOver){
-            timeLeft += 10;
+            timeLeft += timeToAdd;
         }
 
+    }
+
+    public void TargetCollided(int damageAmount){
+        Debug.Log("Target collided and registered");
+        if(!isGameOver){
+            timeLeft -= damageAmount;
+        }
     }
 }
