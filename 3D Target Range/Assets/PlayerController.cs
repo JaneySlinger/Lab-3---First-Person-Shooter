@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+
+
     }
 
     // Update is called once per frame
@@ -67,4 +70,6 @@ public class PlayerController : MonoBehaviour
             Instantiate(shot, shotTransform.position, Camera.main.transform.rotation);
         }
     }
+
+
 }

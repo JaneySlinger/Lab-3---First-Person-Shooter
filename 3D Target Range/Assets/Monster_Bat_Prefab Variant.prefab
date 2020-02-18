@@ -27,18 +27,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBonus: 10
   gameController: {fileID: 0}
---- !u!114 &114264434977535020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6830693118228113125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fc1663673c60e4e866c20064d23d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6831601171833383717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,6 +37,10 @@ PrefabInstance:
     - target: {fileID: 1625221395402176, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: m_Name
       value: Monster_Bat_Prefab Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625221395402176, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
+      propertyPath: m_TagString
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 4085869397129016, guid: c9951ca0f61167b4593ffe21b0a089c8, type: 3}
       propertyPath: m_LocalPosition.x
